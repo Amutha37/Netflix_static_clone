@@ -1,7 +1,7 @@
 # Netflix_static_clone
 Netflix static look done with html and css. FAANG + MTX...
 Netflix static look done with html and css.
-Creating the header 
+
 
 1. The header 
  i) Netflix logo and sign navbar
