@@ -6,7 +6,7 @@ Creating the header
 1. The header 
  i) Netflix logo and sign navbar
  ii) Text "See what's next" on and image background.
- SECTION
+ 2. SECTION
 
 Section 1
 Tab for navigating to : 
@@ -18,7 +18,7 @@ Section 2
 Layout for the Navigation to i)Cancel at any time   ii)Watch anywhere iii)Pick your price
 
 
-Footer 
+3. Footer 
 Contact details
 
 This Project was coodinated by Koketso Motseothata | FAANG + MTX2021
