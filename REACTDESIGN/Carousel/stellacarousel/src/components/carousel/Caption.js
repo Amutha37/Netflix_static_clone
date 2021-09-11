@@ -1,11 +1,13 @@
 import React from "react";
 
-const Caption = () => {
+const Caption = ({ slides, slideIndex }) => {
   return (
-    // <!-- Image text -->  //
-    <div className="caption-container">
-      <p id="caption">print </p>
-    </div>
+    <>
+      {/* <!-- Image text --> */}
+      <div className="caption-container">
+        <p id="caption">{slides[slideIndex - 1].name} </p>
+      </div>
+    </>
   );
 };
 

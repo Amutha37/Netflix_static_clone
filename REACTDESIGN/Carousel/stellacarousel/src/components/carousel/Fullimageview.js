@@ -1,33 +1,51 @@
 import React from "react";
-import Buttons from "./Buttons";
-const Fullimageview = (props) => {
-  const hideImage = {
-    display: "none",
-  };
-  const showImage = {
-    display: "block",
-  };
-  const { status, slides, slideIndex, plusSlides } = props;
-  console.log(props, hideImage, showImage);
 
+const Fullimageview = ({ status, slides, slideIndex }) => {
   return (
     <>
-      {slides.NatureImages.map((item) => (
+      {slides.map((item, index) => (
         <div
-          key={item.name}
           className="mySlides"
-          style={status[slideIndex] ? { showImage } : { hideImage }}
+          style={status[index] ? { display: "block" } : { display: "none" }}
+          key={index}
         >
-          {/* <!-- Full-width images with number text --> */}
-          <div className="numbertext">
-            {slideIndex[slideIndex + 1]} /{slides.NatureImages.length}
-            <p>fullimage</p>
-          </div>
-          console.log(className);
-          <img src={item.image} alt={item.name} style={{ width: "100%" }} />
+          {index === slides.length - 1 ? null : (
+            <img src={item.image} alt={item.name} />
+          )}
+          {/* contact note */}
+          {slideIndex === slides.length && (
+            <div className="contactnote">
+              <p>
+                The paintings are now available through my personal account on{" "}
+                <a href="https://bluethumb.com.au/stella-kypriotis">
+                  bluethumb{" "}
+                </a>{" "}
+                online gallery.
+              </p>
+              <br></br>
+              <p>
+                Just click on the images below for more information. There are
+                no additional charges for deliveries in Australia.
+              </p>
+              <br></br>
+              <p>
+                Contact me if you would like more information. If interested in
+                commissioning me a painting through my contact form.
+              </p>
+            </div>
+          )}
+          {/* <img src={item.image} alt={item.name} /> */}
         </div>
       ))}
-      <Buttons plusSlides={plusSlides} />
+
+      <div id="caption">
+        <p className="imagesize">{slides[slideIndex - 1].size}</p>
+        <p>{slides[slideIndex - 1].name} </p>{" "}
+      </div>
+      {/* <div id="caption">
+        <p>{slides[slideIndex - 1].name} </p>
+      </div> */}
+      {/* <Caption slides={slides} slideIndex={slideIndex} /> */}
     </>
   );
 };
